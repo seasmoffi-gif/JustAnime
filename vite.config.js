@@ -9,4 +9,11 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./"),
     },
   },
+  server: {
+    host: true, // dış erişime izin
+    allowedHosts: [
+      "*", // izin verilen host
+    ],
+    port: 5173, // sabit port
+  },
 })

@@ -3,10 +3,6 @@ version: "3.9"
 services:
   vite-app:
     build: .
-    container_name: vite-app
+    container_name: vite-prod
     ports:
-      - "5173:5173"
-    volumes:
-      - .:/app
-      - /app/node_modules
-    command: bun run dev --host
+      - "4173:4173"

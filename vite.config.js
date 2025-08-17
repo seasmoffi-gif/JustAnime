@@ -12,7 +12,7 @@ export default defineConfig({
   server: {
     host: true, // dış erişime izin
     allowedHosts: [
-      "*", // izin verilen host
+      "vulnton.org", // izin verilen host
     ],
     port: 5173, // sabit port
   },

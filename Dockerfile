@@ -1,18 +1,13 @@
-# Bun resmi imajı
 FROM oven/bun:1
 
 WORKDIR /app
 
-# package.json ve lock dosyalarını kopyala
-COPY package*.json ./
+COPY package.json bun.lockb* ./
 
-# Bağımlılıkları yükle
-RUN bun install
+RUN bun install --no-cache
 
-# Proje dosyalarını kopyala
 COPY . .
 
 EXPOSE 5173
 
-# Vite dev server başlat
 CMD ["bun", "run", "dev", "--host"]
